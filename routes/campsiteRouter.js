@@ -9,7 +9,7 @@ campsiteRouter.route('/')
     Campsite.find()
     .then(campsites => {
         res.statusCode = 200;
-        res.setHeader('Contend-Type', 'application/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(campsites);
     })
     .catch(err => next(err));
